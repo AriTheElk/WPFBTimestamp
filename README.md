@@ -5,4 +5,4 @@ A FaceBook inspired "Time Ago" time stamp plugin. Examples: "Yesterday at 1:42pm
 To install the plugin, download the zipball from GitHub and unzip. Upload the `WPFBTimestamp` folder to `wp/wp-content/plugins/`
 
 
-~Current Version:1.2.1~
+~Current Version:1.2.2~
