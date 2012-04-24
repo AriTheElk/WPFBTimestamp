@@ -3,7 +3,7 @@
 Plugin Name: WPFB Timestamp
 Plugin URI: https://github.com/iGARET/WPFBTimestamp
 Description: A FaceBook inspired "Time Ago" time stamp plugin. Examples: "Yesterday at 1:42pm", "About an hour ago", "August 14 at 4:00am", and more! It automagically selects to display more/less data depending on how recent the post was.
-Version: 1.0
+Version: 1.2
 Author: iGARET
 Author URI: http://igaret.com
 */
