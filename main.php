@@ -11,34 +11,27 @@ Author URI: http://igaret.com
 
 
 
+include_once('updater.php');
 
-add_action('init', 'github_plugin_update');
-function github_plugin_update() {
+define('WP_GITHUB_FORCE_UPDATE', true);
 
-	include_once('updater.php');
+if (is_admin()) { // note the use of is_admin() to double check that this is happening in the admin
 
-	define('WP_GITHUB_FORCE_UPDATE', true);
+	$config = array(
+		'slug' => plugin_basename(__FILE__),
+		'proper_folder_name' => 'WPFBTimestamp',
+		'api_url' => 'https://api.github.com/repos/iGARET/WPFBTimestamp',
+		'raw_url' => 'https://raw.github.com/iGARET/WPFBTimestamp/master',
+		'github_url' => 'https://github.com/iGARET/WPFBTimestamp',
+		'zip_url' => 'https://github.com/iGARET/WPFBTimestamp/zipball/master',
+		'sslverify' => true,
+		'requires' => '3.0',
+		'tested' => '3.3.2',
+	);
 
-	if (is_admin()) { // note the use of is_admin() to double check that this is happening in the admin
-
-		$config = array(
-			'slug' => plugin_basename(__FILE__),
-			'proper_folder_name' => 'WPFBTimestamp',
-			'api_url' => 'https://api.github.com/repos/iGARET/WPFBTimestamp',
-			'raw_url' => 'https://raw.github.com/iGARET/WPFBTimestamp/master',
-			'github_url' => 'https://github.com/iGARET/WPFBTimestamp',
-			'zip_url' => 'https://github.com/iGARET/WPFBTimestamp/zipball/master',
-			'sslverify' => true,
-			'requires' => '3.0',
-			'tested' => '3.3.2',
-		);
-
-		new WPGitHubUpdater($config);
-
-	}
+	new WPGitHubUpdater($config);
 
 }
-
 
 
 
