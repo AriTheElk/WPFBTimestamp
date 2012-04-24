@@ -30,7 +30,7 @@ function github_plugin_update() {
 			'zip_url' => 'https://github.com/iGARET/WPFBTimestamp/zipball/master',
 			'sslverify' => true,
 			'requires' => '3.0',
-			'tested' => '3.3',
+			'tested' => '3.3.2',
 		);
 
 		new WPGitHubUpdater($config);
